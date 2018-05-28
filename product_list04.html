@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+
+
+  <!--META基本設定
+  ================================================== -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>After7</title>
+<meta name="title" content="After7" />
+<meta name="keywords" content="After7,品牌,服飾,飾品,化妝品,零食,家飾" />
+<meta name="viewport" content="width=device-width; initial-scale=1;user-scalable=1;">
+
+
+  <!--CSS
+  ================================================== -->
+<link rel="apple-touch-icon" href="../../images/mark.png"/>
+<link href="css/layout.css" rel="stylesheet" id="layout">
+<link href="css/page.css" rel="stylesheet" id="index">
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<link href='http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400' rel='stylesheet' type='text/css'>
+
+  <!--IE8支援支援HTML5
+  ================================================== -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+<![endif]-->
+
+  <!--JS
+  ================================================== -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- 以下js-->
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="js/helper-plugins/jquery.touchSwipe.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/hisrc.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/resize.js"></script>
+<script>
+$(function(){
+        //top_btn跑出消失
+         var $win = $(window);
+             _width = $win.width();
+             //menuTop = $('.top_btn').offset().top;
+             winTop = $(window).scrollTop();
+             
+             bannerTop = $('.mainvision').offset().top;            
+               //alert(winTop);
+         //   //測高度
+         //    // $('.series_banncontact_nav(){
+         //    //             alert(winTop);
+         //    //         }  
+         //    // )
+            if(_width>=600){
+                $(window).scroll(
+                      function(){
+                          winTop = $(window).scrollTop();
+                          if(winTop >= bannerTop)
+                            {
+                              $('.top_btn').addClass('appear');
+                              $('.m_top_btn').removeClass('appear');
+                            }
+                          else{$('.top_btn').removeClass('appear');}    
+                      }
+                 )
+            }else{
+                $(window).scroll(
+                      function(){
+                          winTop = $(window).scrollTop();
+                          if(winTop >= bannerTop)
+                            {
+                              $('.m_top_btn').addClass('appear');
+                              $('.top_btn').removeClass('appear');
+                            }
+                          else{$('.m_top_btn').removeClass('appear');}    
+                      }
+                 )
+            };
+
+
+
+
+
+
+});
+
+$( window ).resize(function() {
+  
+        //top_btn跑出消失
+         var $win = $(window);
+             _width = $win.width();
+             winTop = $(window).scrollTop();
+             
+             bannerTop = $('.mainvision').offset().top;
+
+            if(_width>=600){
+                $(window).scroll(
+                      function(){
+                          winTop = $(window).scrollTop();
+                          if(winTop >= bannerTop)
+                            {
+                              $('.top_btn').addClass('appear');
+                              $('.m_top_btn').removeClass('appear');
+                            }
+                          else{$('.top_btn').removeClass('appear');}    
+                      }
+                 )
+            }else{
+                $(window).scroll(
+                      function(){
+                          winTop = $(window).scrollTop();
+                          if(winTop >= bannerTop)
+                            {
+                              $('.m_top_btn').addClass('appear');
+                              $('.top_btn').removeClass('appear');
+                            }
+                          else{$('.m_top_btn').removeClass('appear');}    
+                      }
+                 )
+            };
+});      
+
+</script>
+</head>
+<body>
+ <!-- 電腦浮動top -->
+    <div class="top_btn">
+          <span class="top_top">TOP</span>
+          <span class="top_bag">CART</span>
+          <span class="top_bag2">0<span></span></span>
+    </div>
+    <!-- 手機浮動top -->
+    <div class="m_top_btn">
+          <span class="m_top_top">T<br>O<br>P</span>
+    </div>
+    <header class="header">
+      <!--start box-->
+            <div class="logo"><a href="index.html"></a></div>
+           <div class="header_side">
+                <a href="javascript:;">
+                    <div class="side_search">
+                       <div class="search_bar"></div>
+                    </div>
+                </a>
+               <div class="side_login">
+                    <a href="login.html">LOGIN&nbsp;&nbsp;&nbsp;</a>/
+                    <a href="login.html">&nbsp;&nbsp;&nbsp;ACCOUNT</a>
+                </div>
+               <div class="side_bag"> <a href="javascript:;">
+                   MY SHOPPING BAG<span></span></a>
+                         <!-- 購物車 -->
+                         <div class="cart_detail">
+                             <div class="cart_item">
+                                <div class="item_1">
+                                    <img src="images/all/cart/01.png">
+                                </div>
+                                <div class="item_2">
+                                    <p>星星口袋綁帶哈倫褲</p>
+                                    <p>黑色S號</p>
+                                    <p>NT$490</p>   
+                                </div>  
+                                <span class="item_delete"><a href="javascript:;">delete</a></span>          
+                             </div>
+                             <div class="cart_item">
+                                <div class="item_1">
+                                    <img src="images/all/cart/01.png">
+                                </div>
+                                <div class="item_2">
+                                    <p>星星口袋綁帶哈倫褲</p>
+                                    <p>黑色S號</p>
+                                    <p>NT$490</p>   
+                                </div>  
+                                <span class="item_delete"><a href="javascript:;">delete</a></span>          
+                             </div>
+                             <div class="cart_buy"><a href="look_cart.html">CHECKING OUT</a></div>
+                         </div>
+                         <!-- 購物車結束 --> 
+               </div>              
+           </div>
+           
+                   <!-- 電腦版滑出搜尋bar -->
+           <div class="hide_search">
+                <div class="hide_search_select">
+                       <select>
+                          <option href="javascript:;">SERIES</option>
+                          <option href="javascript:;">CLOTHING 服飾</option>
+                          <option href="javascript:;">ACCESSORIES 配件</option>
+                          <option href="javascript:;">COSMETICS 化妝品</option>
+                          <option href="javascript:;">FOOD 食物</option>
+                          <option href="javascript:;">OTHER 聯絡我們</option>
+                      </select>
+                </div>
+                <div class="hide_search_bar">
+                    <input class="searchbox" type="text"  />
+                    <a href="search.html">
+                    </a>
+                </div>
+           </div>
+            <!-- 電腦版滑出搜尋bar結束 -->    
+            <nav class="nav">
+                <li><a href="after7.html">關於我們</a></li>
+                <li><a href="newslist.html">最新消息</a></li>
+                <li><a href="javascript:;">服飾</a></li>
+                <li><a href="javascript:;">配件</a></li>
+                <li><a href="javascript:;">化妝品</a></li>
+                <li><a href="javascript:;">食物</a></li>
+                <li><a href="javascript:;">其他</a></li>
+                <li><a href="after7.html#contact_page" id="contact_pageBtn">聯絡我們</a></li>
+           </nav>
+           <!-- 手機板物件 -->
+           <a href="javascript:;"><div class="m_list"></div></a>
+           <a href="look_cart.html"><div class="m_bag">
+                <span class="m_bag_count">
+                    1
+                </span>
+           </div></a>            
+            <nav class="mobile_nav">
+                  <li><a href="after7.html">關於我們</a></li>
+                  <li><a href="newslist.html">最新消息</a></li>
+                  <li><a href="product_list01.html">服飾</a></li>
+                  <li><a href="product_list02.html">配件</a></li>
+                  <li><a href="product_list03.html">化妝品</a></li>
+                  <li><a href="product_list04.html">食物</a></li>
+                  <li><a href="product_list05.html">其他</a></li>
+                  <li><a href="after7.html#contact_page" id="contact_pageBtn_mobile">聯絡我們</a></li>
+                  <li>
+                      <a class="m_login" href="login.html">LOGIN&nbsp;&nbsp;&nbsp;</a>/
+                      <a class="m_login" href="member.html">&nbsp;&nbsp;&nbsp;ACCOUNT</a>
+                  </li>
+             </nav>
+        <!--end box-->
+    </header>   
+ <!-- 首頁內容======================= -->
+ <article class="article">
+        <!-- 電腦版浮動主選單 -->
+        <div class="float_nav">
+             <!-- 服飾產品列表01 -->
+             <div id="tab1" class="float_nav_in float_nav01">
+                      <div class="brand_logo">  
+                          <div class="brand_box1_img01">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/01.jpg">
+                          </div>
+                          <div class="brand_box1_img02">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/05.jpg">
+                          </div>
+                      </div>
+                      <div class="brand_header">                          
+                          <h3>服飾<span>&nbsp;Clothing</span></h3>
+                      </div>
+                      <ul class="brand_box1_li01">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+                       <ul class="brand_box1_li02">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+             </div>
+             <!-- 飾品列表02 -->
+             <div id="tab1" class="float_nav_in float_nav02">
+                       <div class="brand_logo">  
+                          <div class="brand_box2_img01">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/01.jpg">
+                          </div>
+                          <div class="brand_box2_img02">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/05.jpg">
+                          </div>
+                      </div>
+                      <div class="brand_header">                          
+                          <h3>飾品<span>&nbsp;Accessories</span></h3>
+                      </div>
+                     <ul class="brand_box2_li01">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+                       <ul class="brand_box2_li02">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+             </div>
+             <!-- 化妝品列表03 -->
+             <div id="tab1" class="float_nav_in float_nav03">
+                      <div class="brand_logo">  
+                          <div class="brand_box3_img01">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/01.jpg">
+                          </div>
+                          <div class="brand_box3_img02">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/05.jpg">
+                          </div>
+                      </div>
+                      <div class="brand_header">                          
+                          <h3>化妝品<span>&nbsp;Cosmetics</span></h3>
+                      </div>
+                      <ul class="brand_box3_li01">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+                       <ul class="brand_box3_li02">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+             </div>
+             <!-- 食品產品列表04 -->
+             <div id="tab1" class="float_nav_in float_nav04">
+                      <div class="brand_logo">  
+                          <div class="brand_box4_img01">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/01.jpg">
+                          </div>
+                          <div class="brand_box4_img02">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/05.jpg">
+                          </div>
+                      </div>
+                      <div class="brand_header">                          
+                          <h3>食品<span>&nbsp;Food</span></h3>
+                      </div>
+                      <ul class="brand_box4_li01">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+                       <ul class="brand_box4_li02">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+             </div>
+             <!-- 其他產品列表05 -->
+             <div id="tab1" class="float_nav_in float_nav05">
+                      <div class="brand_logo">  
+                          <div class="brand_box5_img01">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/01.jpg">
+                          </div>
+                          <div class="brand_box5_img02">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/05.jpg">
+                          </div>
+                      </div>
+                      <div class="brand_header">                          
+                          <h3>其他<span>&nbsp;Other</span></h3>
+                      </div>
+                      <ul class="brand_box5_li01">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+                       <ul class="brand_box5_li02">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+             </div>
+       </div>
+    <!-- 電腦版浮動主選單結束 -->
+         <!-- 手機搜尋bar -->
+        <div class="mobile_search">
+                <div class="m_search_select">
+                       <select >
+                          <option href="javascript:;">SERIES</option>
+                          <option href="javascript:;">CLOTHING 服飾</option>
+                          <option href="javascript:;">ACCESSORIES 配件</option>
+                          <option href="javascript:;">COSMETICS 化妝品</option>
+                          <option href="javascript:;">FOOD 食物</option>
+                          <option href="javascript:;">OTHER 聯絡我們</option>
+                      </select>
+                </div>
+                <div class="m_search_bar">
+                    <input class="searchbox" type="text"  />
+                    <a href="search.html">
+                      <div class="searchbox_click" onclick="" /></div>
+                    </a>
+                </div>
+           </div>
+        <!-- 主視覺 -->
+        <div class="mainvision">
+             <div class="box">
+              <ul class="slider">
+                  <li><img src="images/page_banner/04.jpg" data-hisrc="images/page_banner/04.jpg" data-lowbandwidth="images/page_banner/04.jpg"></li>     
+              </ul>
+             </div>
+        </div>
+        <!-- 瀑布流內容 -->
+        <!-- 服裝 -->
+        <div class="box p_Clothing">            
+            <div class="container">
+              <ul class="grid effect-3" id="grid1">
+                <li>
+                      <div class="ct_logo" href="javascript:;">
+                        <img class="ct_logo_img" src="images/page_clothing/01.jpg">
+                     </div>
+                      <!-- 左側導覽列 -->
+                                <div class="left_top">
+                                  <h3>服飾<span>&nbsp;Clothing</span></h3>
+                                </div>
+                                <div class="left_nav" id="left_nav">
+                                     <a class="active" href="javascript:;">
+                                          <span>品牌名稱</span></a>
+                                     <a href="javascript:;">
+                                          <span>品牌名稱</span></a>
+                                     <a href="javascript:;">
+                                          <span>品牌名稱</span></a>
+                                     <a href="javascript:;">
+                                          <span>品牌名稱</span></a>
+                                     <a href="javascript:;">
+                                          <span>品牌名稱</span></a>
+                                     <a href="javascript:;">
+                                          <span>品牌名稱</span></a>
+                                     
+                                </div>
+                                <div class="m_left_nav">
+                                       <select>
+                                          <option href="javascript:;">品牌名稱1</option>
+                                          <option href="javascript:;">品牌名稱2</option>
+                                          <option href="javascript:;">品牌名稱3</option>
+                                          <option href="javascript:;">品牌名稱4</option>
+                                          <option href="javascript:;">品牌名稱5</option>
+                                          <option href="javascript:;">品牌名稱6</option>
+                                      </select>
+                                </div>
+                    
+                </li>
+                <!-- 品牌介紹 -->
+                <li class="brand_logo_intro">
+                    <div>
+                        <span>  
+                          <h1>MIDNIGHT COCO</h1>
+                          <p>品牌敘述來自韓國的時尚服飾品牌，品牌敘述來自韓國的時尚服飾品牌</p>
+                        </span>               
+                    </div>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>
+                      <a href="product_2014121201.html"><img src="images/page_clothing/03.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>
+                      <a href="product_2014121201.html"><img src="images/page_clothing/04.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>
+                      <a href="product_2014121201.html"><img src="images/page_clothing/05.jpg"></a>
+                </li>
+                <!-- 襯圖 -->
+                <li>
+                      <img src="images/page_clothing/06.jpg">
+                </li>
+                <li>  
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>
+                      <a href="product_2014121201.html"><img src="images/page_clothing/07.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/09.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/10.jpg"></a>
+                </li>
+                <!-- 第11個 -->
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/11.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/12.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>
+                      <a href="product_2014121201.html"><img src="images/page_clothing/13.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>
+                      <a href="product_2014121201.html"><img src="images/page_clothing/14.jpg"></a>
+                </li>
+                <li>  
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>
+                      <a href="product_2014121201.html"><img src="images/page_clothing/15.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/16.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/17.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/18.jpg"></a>
+                </li>
+                 <!-- 第21個 -->
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/19.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/20.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>
+                      <a href="product_2014121201.html"><img src="images/page_clothing/21.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>
+                      <a href="product_2014121201.html"><img src="images/page_clothing/22.jpg"></a>
+                </li>
+                <li>  
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>
+                      <a href="product_2014121201.html"><img src="images/page_clothing/23.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/24.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/25.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/26.jpg"></a>
+                </li>
+                                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/27.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/28.jpg"></a>
+                </li>
+                <li>
+                      <span>
+                          <span>PRICE&nbsp;1200&nbsp;N.T.</span>
+                          <span><a href="javascript:;">加入購物車</a></span>
+                      </span>      
+                      <a href="product_2014121201.html"><img src="images/page_clothing/29.jpg"></a>
+                </li>
+              </ul>
+            </div>    
+            <!-- 下方清單開始 -->
+            <div class="page">
+                <!-- PAGER -->
+                <a class="nextnext" href="javascript:;">&lt;</a>
+                <a class="num this" href="javascript:;" >1</a>
+                <a class="num" href="javascript:;">2</a>
+                <a class="num" href="javascript:;">3</a>
+                <a  class="nextnext" href="javascript:;">&gt;</a>
+                <!-- /PAGER -->
+            </div>
+        </div>     
+</article>
+<!-- 首頁內容結束 -->
+ <!-- 頁尾內容======================= -->
+
+ <div class="footer">
+      <div class="footer_logo">
+            <h1>after7</h1>  
+      </div>
+      <div class="footer_contact">
+             <h1>contact</h1>  
+           <nav class="contact_nav">
+                  <li><a href="javascript:;">fb</a></li>
+                  <li><a href="after7.html">phone</a>
+                      <p class="phone">
+                        TEL:02-2222-2222&nbsp;&nbsp;&nbsp;
+                        FAX:02-2222-2222
+                      </p>
+                  </li>
+                  <li><a  href="mailto:service@after7-tw.com.tw">mail</a></li>
+                     
+           </nav>      
+      </div> 
+      <div class="footer_service">
+           <h1>service</h1>  
+           <div class="service_nav">
+             <nav id="ser_nav1">
+                  <li><a href="after7.html">AFTER7</a></li>
+                  <li><a href="newslist.html">NEWS</a></li>
+                  <li><a href="faq1.html">FAQ</a></li>
+                  <li><a href="after7.html#contact_page" id="#contact_pageBtn_footer">CONTACT</a></li>  
+             </nav>
+             <nav id="ser_nav2">
+                  <li><a href="login.html">SIGN UP</a></li>
+                  <li><a href="login.html">LOGIN</a></li>
+                  <li><a href="member.html">MEMBER</a></li>
+                  <li><a href="look_cart.html">SHOPING BAG</a></li>  
+             </nav>
+           </div>         
+      </div>
+      <div class="footer_row">
+          <div class="footer_copy">
+                <p>©2015  After 7. All Rights Reserved.</p>  
+          </div>
+          <div class="footer_design">
+                <p>Design by Begonia 海棠<a target="_blank" href="http://www.begonia.tw">網頁設計</a>
+                </p>  
+          </div>
+      </div>
+
+</div>
+
+</body>
+<script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/imagesloaded.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/AnimOnScroll.js"></script>
+    <script>
+    //改寫JQ失敗
+    // $('#grid1 li').hover(function(){
+    //   console.info("Im HERE"+$(this).html());
+    //   $(this).addClass('aa');
+    // },function(){
+    //   $(this).removeClass('aa');
+    //   });
+      new AnimOnScroll( document.getElementById( 'grid1' ), {
+        minDuration : 0.4,
+        maxDuration : 0.7,
+        viewportFactor : 0.2
+      } );
+       new AnimOnScroll( document.getElementById( 'grid2' ), {
+        minDuration : 0.4,
+        maxDuration : 0.7,
+        viewportFactor : 0.2
+      } );
+        new AnimOnScroll( document.getElementById( 'grid3' ), {
+        minDuration : 0.4,
+        maxDuration : 0.7,
+        viewportFactor : 0.2
+      } );
+         new AnimOnScroll( document.getElementById( 'grid4' ), {
+        minDuration : 0.4,
+        maxDuration : 0.7,
+        viewportFactor : 0.2
+      } );
+          new AnimOnScroll( document.getElementById( 'grid5' ), {
+        minDuration : 0.4,
+        maxDuration : 0.7,
+        viewportFactor : 0.2
+      } );
+    </script>
+</html>

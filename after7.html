@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+
+
+  <!--META基本設定
+  ================================================== -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>After7</title>
+<meta name="title" content="After7" />
+<meta name="keywords" content="After7,品牌,服飾,飾品,化妝品,零食,家飾" />
+<meta name="viewport" content="width=device-width; initial-scale=1;user-scalable=1;">
+
+
+<!--CSS
+================================================== -->
+<link rel="apple-touch-icon" href="../../images/mark.png"/>
+<link href="css/layout.css" rel="stylesheet" id="layout">
+<link href="css/after.css" rel="stylesheet" id="after">
+<link href="css/component.css" rel="stylesheet" type="text/css" />
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400' rel='stylesheet' type='text/css'>
+<!-- 測試 -->
+<link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+
+<!--IE8支援支援HTML5
+================================================== -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+<![endif]-->
+
+ <!--JS
+================================================== -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- 以下js-->
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="js/helper-plugins/jquery.touchSwipe.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+
+<!-- 測試 -->
+<script src="js/vendor/TweenMax.min.js"></script>
+<script src="js/vendor/jquery.scrollmagic.min.js"></script>       
+<script src="js/vendor/main2.js"></script>
+<link rel="stylesheet" href="css/main.css">
+
+<script src="js/hisrc.js"></script>
+<script src="js/page.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/resize.js"></script>
+<script>
+$(function() {
+    //支援IE9 placeholder
+    var Browser = {
+            IsIe: function () {
+                return navigator.appVersion.indexOf("MSIE") != -1;
+            },
+            Navigator: navigator.appVersion,
+            Version: function() {
+                var version = 999; // we assume a sane browser
+                if (navigator.appVersion.indexOf("MSIE") != -1)
+                    // bah, IE again, lets downgrade version number
+                    version = parseFloat(navigator.appVersion.split("MSIE")[1]);
+                return version;
+            }
+        };
+
+    if (Browser.IsIe() && Browser.Version() <= 9) {
+         // Placeholder fix for IE
+          $('input').focus(function() {
+            var i = $(this);
+            if(i.val() == i.attr('placeholder')) {
+              i.val('').removeClass('placeholder');
+              if(i.hasClass('password')) {
+                i.removeClass('password');
+                this.type='password';
+              }     
+            }
+          }).blur(function() {
+            var i = $(this);  
+            if(i.val() == '' || i.val() == i.attr('placeholder')) {
+              if(this.type=='password') {
+                i.addClass('password');
+                this.type='text';
+              }
+              i.addClass('placeholder').val(i.attr('placeholder'));
+            }
+          }).blur().parents('form').submit(function() {
+            //if($(this).validationEngine('validate')) { // If using validationEngine
+              $(this).find('[placeholder]').each(function() {
+                var i = $(this);
+                if(i.val() == i.attr('placeholder'))
+                  i.val('');
+                  i.removeClass('placeholder');
+
+              })
+            //}
+          });
+    }
+        if (Browser.IsIe() && Browser.Version() <= 9) {
+         // Placeholder fix for IE
+          $('textarea').focus(function() {
+            var i = $(this);
+            if(i.val() == i.attr('placeholder')) {
+              i.val('').removeClass('placeholder');
+              if(i.hasClass('password')) {
+                i.removeClass('password');
+                this.type='password';
+              }     
+            }
+          }).blur(function() {
+            var i = $(this);  
+            if(i.val() == '' || i.val() == i.attr('placeholder')) {
+              if(this.type=='password') {
+                i.addClass('password');
+                this.type='text';
+              }
+              i.addClass('placeholder').val(i.attr('placeholder'));
+            }
+          }).blur().parents('form').submit(function() {
+            //if($(this).validationEngine('validate')) { // If using validationEngine
+              $(this).find('[placeholder]').each(function() {
+                var i = $(this);
+                if(i.val() == i.attr('placeholder'))
+                  i.val('');
+                  i.removeClass('placeholder');
+
+              })
+            //}
+          });
+    }
+
+
+})
+</script>
+<style>
+  h2 {
+  font-size: 150px;
+  font-weight: normal;
+  margin-top: 200px;
+  color: #FFB000;
+  padding: 60px;
+  text-shadow: 0 2px 1px #000;
+  font-family: 'Luckiest Guy',Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,Gadget,sans-serif;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+    <!-- 電腦浮動top -->
+    <div class="top_btn">
+          <span class="top_top">TOP</span>
+          <span class="top_bag">CART</span>
+          <span class="top_bag2">0<span></span></span>
+    </div>
+    <!-- 手機浮動top -->
+    <div class="m_top_btn">
+          <span class="m_top_top">T<br>O<br>P</span>
+    </div>
+    <header class="header">
+      <!--start box-->
+            <div class="logo"><a href="index.html"></a></div>
+           <div class="header_side">
+                <a href="javascript:;">
+                    <div class="side_search">
+                       <div class="search_bar"></div>
+                    </div>
+                </a>
+               <div class="side_login">
+                    <a href="login.html">LOGIN&nbsp;&nbsp;&nbsp;</a>/
+                    <a href="login.html">&nbsp;&nbsp;&nbsp;ACCOUNT</a>
+                </div>
+               <div class="side_bag"> <a href="javascript:;">
+                   MY SHOPPING BAG<span></span></a>
+                         <!-- 購物車 -->
+                         <div class="cart_detail">
+                             <div class="cart_item">
+                                <div class="item_1">
+                                    <img src="images/all/cart/01.png">
+                                </div>
+                                <div class="item_2">
+                                    <p>星星口袋綁帶哈倫褲</p>
+                                    <p>黑色S號</p>
+                                    <p>NT$490</p>   
+                                </div>  
+                                <span class="item_delete"><a href="javascript:;">delete</a></span>          
+                             </div>
+                             <div class="cart_item">
+                                <div class="item_1">
+                                    <img src="images/all/cart/01.png">
+                                </div>
+                                <div class="item_2">
+                                    <p>星星口袋綁帶哈倫褲</p>
+                                    <p>黑色S號</p>
+                                    <p>NT$490</p>   
+                                </div>  
+                                <span class="item_delete"><a href="javascript:;">delete</a></span>          
+                             </div>
+                             <div class="cart_buy"><a href="look_cart.html">CHECKING OUT</a></div>
+                         </div>
+                         <!-- 購物車結束 --> 
+               </div>              
+           </div>
+           
+                   <!-- 電腦版滑出搜尋bar -->
+           <div class="hide_search">
+                <div class="hide_search_select">
+                       <select>
+                          <option href="javascript:;">SERIES</option>
+                          <option href="javascript:;">CLOTHING 服飾</option>
+                          <option href="javascript:;">ACCESSORIES 配件</option>
+                          <option href="javascript:;">COSMETICS 化妝品</option>
+                          <option href="javascript:;">FOOD 食物</option>
+                          <option href="javascript:;">OTHER 聯絡我們</option>
+                      </select>
+                </div>
+                <div class="hide_search_bar">
+                    <input class="searchbox" type="text"  />
+                    <a href="search.html">
+                    </a>
+                </div>
+           </div>
+            <!-- 電腦版滑出搜尋bar結束 -->    
+            <nav class="nav">
+                <li><a href="after7.html">關於我們</a></li>
+                <li><a href="newslist.html">最新消息</a></li>
+                <li><a href="javascript:;">服飾</a></li>
+                <li><a href="javascript:;">配件</a></li>
+                <li><a href="javascript:;">化妝品</a></li>
+                <li><a href="javascript:;">食物</a></li>
+                <li><a href="javascript:;">其他</a></li>
+                <li><a href="after7.html#contact_page" id="contact_pageBtn">聯絡我們</a></li>
+           </nav>
+           <!-- 手機板物件 -->
+           <a href="javascript:;"><div class="m_list"></div></a>
+           <a href="look_cart.html"><div class="m_bag">
+                <span class="m_bag_count">
+                    1
+                </span>
+           </div></a>            
+            <nav class="mobile_nav">
+                  <li><a href="after7.html">關於我們</a></li>
+                  <li><a href="newslist.html">最新消息</a></li>
+                  <li><a href="product_list01.html">服飾</a></li>
+                  <li><a href="product_list02.html">配件</a></li>
+                  <li><a href="product_list03.html">化妝品</a></li>
+                  <li><a href="product_list04.html">食物</a></li>
+                  <li><a href="product_list05.html">其他</a></li>
+                  <li><a href="after7.html#contact_page" id="contact_pageBtn_mobile">聯絡我們</a></li>
+                  <li>
+                      <a class="m_login" href="login.html">LOGIN&nbsp;&nbsp;&nbsp;</a>/
+                      <a class="m_login" href="member.html">&nbsp;&nbsp;&nbsp;ACCOUNT</a>
+                  </li>
+             </nav>
+        <!--end box-->
+    </header>  
+ <!-- 首頁內容======================= -->
+ <article class="article">
+        <!-- 電腦版浮動主選單 -->
+        <div class="float_nav">
+             <!-- 服飾產品列表01 -->
+             <div id="tab1" class="float_nav_in float_nav01">
+                      <div class="brand_logo">  
+                          <div class="brand_box1_img01">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/01.jpg">
+                          </div>
+                          <div class="brand_box1_img02">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/05.jpg">
+                          </div>
+                      </div>
+                      <div class="brand_header">                          
+                          <h3>服飾<span>&nbsp;Clothing</span></h3>
+                      </div>
+                      <ul class="brand_box1_li01">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+                       <ul class="brand_box1_li02">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+             </div>
+             <!-- 飾品列表02 -->
+             <div id="tab1" class="float_nav_in float_nav02">
+                       <div class="brand_logo">  
+                          <div class="brand_box2_img01">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/01.jpg">
+                          </div>
+                          <div class="brand_box2_img02">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/05.jpg">
+                          </div>
+                      </div>
+                      <div class="brand_header">                          
+                          <h3>飾品<span>&nbsp;Accessories</span></h3>
+                      </div>
+                     <ul class="brand_box2_li01">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+                       <ul class="brand_box2_li02">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+             </div>
+             <!-- 化妝品列表03 -->
+             <div id="tab1" class="float_nav_in float_nav03">
+                      <div class="brand_logo">  
+                          <div class="brand_box3_img01">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/01.jpg">
+                          </div>
+                          <div class="brand_box3_img02">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/05.jpg">
+                          </div>
+                      </div>
+                      <div class="brand_header">                          
+                          <h3>化妝品<span>&nbsp;Cosmetics</span></h3>
+                      </div>
+                      <ul class="brand_box3_li01">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+                       <ul class="brand_box3_li02">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+             </div>
+             <!-- 食品產品列表04 -->
+             <div id="tab1" class="float_nav_in float_nav04">
+                      <div class="brand_logo">  
+                          <div class="brand_box4_img01">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/01.jpg">
+                          </div>
+                          <div class="brand_box4_img02">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/05.jpg">
+                          </div>
+                      </div>
+                      <div class="brand_header">                          
+                          <h3>食品<span>&nbsp;Food</span></h3>
+                      </div>
+                      <ul class="brand_box4_li01">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+                       <ul class="brand_box4_li02">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+             </div>
+             <!-- 其他產品列表05 -->
+             <div id="tab1" class="float_nav_in float_nav05">
+                      <div class="brand_logo">  
+                          <div class="brand_box5_img01">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/01.jpg">
+                          </div>
+                          <div class="brand_box5_img02">
+                              <img src="images/all/nav/05.jpg">
+                              <img src="images/all/nav/04.jpg">
+                              <img src="images/all/nav/03.jpg">
+                              <img src="images/all/nav/02.jpg">
+                              <img src="images/all/nav/01.jpg">
+                              <img src="images/all/nav/05.jpg">
+                          </div>
+                      </div>
+                      <div class="brand_header">                          
+                          <h3>其他<span>&nbsp;Other</span></h3>
+                      </div>
+                      <ul class="brand_box5_li01">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+                       <ul class="brand_box5_li02">
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱</a></li>
+                          <li><a href="product_list.html">品牌名稱品牌名稱</a></li>
+                      </ul>  
+             </div>
+       </div>
+    <!-- 電腦版浮動主選單結束 -->
+        <!-- 手機搜尋bar -->
+        <div class="mobile_search">
+                <div class="m_search_select">
+                       <select >
+                          <option href="javascript:;">SERIES</option>
+                          <option href="javascript:;">CLOTHING 服飾</option>
+                          <option href="javascript:;">ACCESSORIES 配件</option>
+                          <option href="javascript:;">COSMETICS 化妝品</option>
+                          <option href="javascript:;">FOOD 食物</option>
+                          <option href="javascript:;">OTHER 聯絡我們</option>
+                      </select>
+                </div>
+                <div class="m_search_bar">
+                    <input class="searchbox" type="text"  />
+                    <a href="search.html">
+                      <div class="searchbox_click" onclick="" /></div>
+                    </a>
+                </div>
+           </div>
+        <!-- 關於我們頁面內容 -->
+        <!-- 關於我們 -->
+        <div class="box after7_01">
+            <div class="series_banner">
+                <img src="images/about/01.png">
+            </div>
+            <div class="container">
+              <!-- 文字介紹 -->
+              <div class="txt_wrap">
+                  <p class="after_p effect01"><span class="after_spot01"></span>秉持著100%韓風美學生活為基礎，以都會精品印象為要求，多元的生活角度及品味打造完全的韓式生活。為韓活中的時尚、迷戀再一次下全新的註解！讓百般要求的你，無可挑剔。</p>
+                  <p class="after_line effect02"><span class="after_spot02"></span></p>
+                  <p class="after_p effect03">
+                  在<span class="after_spot01"></span>，在我們的７種態度之後，可以尋找到我們的７種堅持。<br>
+                  嚴選、時尚、迷戀、品味、個性、態度、效率，而在這個７個堅持的背後，沒有特定風格，只有高標準的用心為您嚴選各項商品。密切與韓國各大品牌合作，在價格、品質上嚴格把關，以最快的速度全數由韓國進口，讓您能享受與韓國最短時差的時尚精隨。
+                  </p>
+              </div>
+              <!-- 拼圖7 電腦版-->
+              <div class="after_7">
+                   <span class="pinto pinto01 effect_7_01">
+                      <p class="pinto_p01 effect_7_p_left">主打韓國頂級潮流商品，跟隨韓風零時差</p>
+                      <span class="pinto_span01 effect_7_span_left"></span>
+                   </span>
+                   <span class="pinto pinto02 effect_7_02">
+                      <p class="pinto_p02 effect_7_p_left">所有商品為當地流行品牌，100%由韓國進口</p>
+                      <span class="pinto_span02 effect_7_span_left"></span>
+                   </span>
+                   <span class="pinto pinto03 effect_7_03">
+                      <p class="pinto_p03 effect_7_p_right">提供最新的商品資訊，隨時掌握第一手流行訊息</p>
+                      <span class="pinto_span03 effect_7_span_right"></span>
+                   </span>
+                   <span class="pinto pinto04 effect_7_04">
+                      <p class="pinto_p04 effect_7_p_right">以最實惠的價格，購買到韓國最時尚、最高品質商品</p>
+                      <span class="pinto_span04 effect_7_span_right"></span>
+                   </span>
+                   <span class="pinto pinto05 effect_7_05">
+                      <p class="pinto_p05 effect_7_p_right">商品經專業採購精挑細選，無可挑剔的時尚品味</p>
+                      <span class="pinto_span05 effect_7_span_right"></span>
+                   </span>
+                   <span class="pinto pinto06 effect_7_06">
+                      <p class="pinto_p06 effect_7_p_right">提供最完善的售後服務，讓顧客下單無後顧之憂</p>
+                      <span class="pinto_span06 effect_7_span_right"></span>
+                   </span>
+                   <span class="pinto pinto07 effect_7_07">
+                      <p class="pinto_p07 effect_7_p_left">After7秉持最高品質的態度，傾聽客戶需求，給您最親切的服務</p>
+                      <span class="pinto_span07 effect_7_span_left"></span>
+                   </span>
+                  <!--  <img src="images/about/bg01.png"> -->
+              </div>
+              <!-- 拼圖7 手機版-->
+              <div class="pinto_mobile">
+                    <a class="active">
+                      <div><img src="images/about/pinto_mobile/01.png" alt="時尚嚴選"></div>
+                      <span>主打韓國頂級潮流商品，跟隨韓風零時差</span>
+                    </a>
+                    <a class="active">
+                      <div><img src="images/about/pinto_mobile/02.png" alt="時尚嚴選"></div>
+                      <span>所有商品為當地流行品牌，100%由韓國進口</span>
+                    </a>
+                    <a class="active">
+                      <div><img src="images/about/pinto_mobile/03.png" alt="時尚嚴選"></div>
+                      <span>提供最新的商品資訊，隨時掌握第一手流行訊息</span>
+                    </a>
+                    <a class="active">
+                      <div><img src="images/about/pinto_mobile/04.png" alt="時尚嚴選"></div>
+                      <span>以最實惠的價格，購買到韓國最時尚、最高品質商品</span>
+                    </a>
+                    <a class="active">
+                      <div><img src="images/about/pinto_mobile/05.png" alt="時尚嚴選"></div>
+                      <span>商品經專業採購精挑細選，無可挑剔的時尚品味 </span>
+                    </a>
+                    <a class="active">
+                      <div><img src="images/about/pinto_mobile/06.png" alt="時尚嚴選"></div>
+                      <span>提供最完善的售後服務，讓顧客下單無後顧之憂</span>
+                    </a>
+                    <a class="active">
+                      <div><img src="images/about/pinto_mobile/07.png" alt="時尚嚴選"></div>
+                      <span>After7秉持最高品質的態度，傾聽客戶需求，給您最親切的服務</span>
+                    </a>
+                </div>
+
+
+
+            </div>    
+        </div>
+
+        <!-- 聯絡我們 -->
+        <div class="box after7_02">
+             <div class="series_banner">
+                <!-- 斜斜的字 -->
+                <div class="p_static_wrap effect01">
+                    <p class="after_p p_static effect04">
+                      最後，謝謝妳們願意停留在<span class="after_spot01"></span>
+                      </p>
+                </div>
+                <!-- 斜斜的字(手機板) -->
+                <div class="p_static_wrap2">
+                    <p class="after_p p_static2">
+                      最後，謝謝妳們願意停留在<span class="after_spot01"></span>
+                      </p>
+                </div>               
+
+                <img src="images/about/02.png">
+            </div>
+            <div class="container">
+              <!-- 聯絡我們格子塊 -->
+              <div class="about_contact">
+                <div class="contact_card_wrap">
+                    <div class="contact_card contact_card1" id="contact_page">
+                          <h1 class="contact_card_h2">about</h1>
+                          <p class="contact_card_p">任何需求，都歡迎聯絡我們</p>
+                          <h1 class="contact_card_h3">after7</h1>
+                          
+                          <div class="about_cart_p_warp">
+                               <!-- <p class="contact_card_p2">
+                                  <i class="icon_font fa fa-facebook"></i>
+                                  粉絲團：After7
+                               </p> -->
+                               <p class="contact_card_p2">
+                                  <i class="icon_font fa fa-phone"></i>
+                                  TEL：+886 02-2351-3778
+                               </p>
+                               <p class="contact_card_p2">
+                                  <i class="icon_font fa fa-fax"></i>
+                                  FAX：+886 02-2351-3778
+                               </p>
+                               <p class="contact_card_p2">
+                                  <i class="icon_font fa fa-clock-o"></i>
+                                  上班時間：週一~週五9：00~17：30
+                               </p>
+                          </div>
+                    </div>
+                    <div class="contact_card contact_card2">
+                          <span class="frame frame01"></span>
+                          <span class="frame frame02"></span>
+                          <span class="frame frame03"></span>
+                          <span class="frame frame04"></span>
+                          <span class="corner corner01"></span>
+                          <span class="corner corner02"></span>
+                          <span class="corner corner03"></span>
+                          <span class="corner corner04"></span>
+                          <h1 class="contact_card_h1">contact</h1>
+                          <p class="contact_card_p contact_card_p1">謝謝您瀏覽我們的網站，若您有些疑問希望得到回覆，或是希望與我們分享您的意見與資訊。我們將非常樂意與您聯繫！</p>
+
+                          <form class="form_contact">
+                            <div class="form-group1">
+                                <input type="text" class="about_input" id="" placeholder="信件主旨">
+                                <input type="text" class="about_input" id="" placeholder="姓名">
+                                <input type="text" class="about_input" id="" placeholder="Email">
+                                <input type="text" class="about_input" id="" placeholder="連絡電話">                    
+                            </div>
+                             <div class="form-group2">
+                                  <textarea name="message"  class="about_input a_input01" id="" placeholder="您的訊息"></textarea>
+                                  <div>
+                                  <input type="text" class="about_input a_input02" id="" placeholder="驗證碼">
+                                  </div>
+                                  <div class="a_input03">
+                                      <img  src="images/about/09.png" />
+                                  </div>
+                            </div>
+                            <div class="row">
+                                <div class="button04">
+                                    <a href="#">送出訊息</a>
+                                 </div>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+              </div>    
+            </div>
+        </div>
+</article>
+<!-- 首頁內容結束 -->
+ <!-- 頁尾內容======================= -->
+
+ <div class="footer">
+      <div class="footer_logo">
+            <h1>after7</h1>  
+      </div>
+      <div class="footer_contact">
+             <h1>contact</h1>  
+           <nav class="contact_nav">
+                  <li><a href="javascript:;">fb</a></li>
+                  <li><a href="after7.html">phone</a>
+                      <p class="phone">
+                        TEL:02-2222-2222&nbsp;&nbsp;&nbsp;
+                        FAX:02-2222-2222
+                      </p>
+                  </li>
+                  <li><a  href="mailto:service@after7-tw.com.tw">mail</a></li>
+                     
+           </nav>      
+      </div> 
+      <div class="footer_service">
+           <h1>service</h1>  
+           <div class="service_nav">
+             <nav id="ser_nav1">
+                  <li><a href="after7.html">AFTER7</a></li>
+                  <li><a href="newslist.html">NEWS</a></li>
+                  <li><a href="faq1.html">FAQ</a></li>
+                  <li><a href="after7.html#contact_page" id="contact_pageBtn_footer">CONTACT</a></li>  
+             </nav>
+             <nav id="ser_nav2">
+                  <li><a href="login.html">SIGN UP</a></li>
+                  <li><a href="login.html">LOGIN</a></li>
+                  <li><a href="member.html">MEMBER</a></li>
+                  <li><a href="look_cart.html">SHOPING BAG</a></li>  
+             </nav>
+           </div>         
+      </div>
+      <div class="footer_row">
+          <div class="footer_copy">
+                <p>©2015  After 7. All Rights Reserved.</p>  
+          </div>
+          <div class="footer_design">
+                <p>Design by Begonia 海棠<a target="_blank" href="http://www.begonia.tw">網頁設計</a>
+                </p>  
+          </div>
+      </div>
+
+</div>
+<script>
+$(function( ) {
+
+});
+</script>
+</body>
+</html>
