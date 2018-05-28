@@ -1,0 +1,433 @@
+/*------------------------------------------------------------------
+Theme Name: 天承
+Author URI: http://www.begonia.tw/
+Description: Index Layout
+Author: Begonia Design, Inc.
+------------------------------------------------------------------*/
+@charset "utf-8";
+@import "reset.css";
+/*------------------------------------------------------------------
+Main Layout
+------------------------------------------------------------------*/
+/*主視覺***********************************************/
+.mainvision {
+	width:100%; position:relative;
+	background:url(../images/line03.png) center bottom repeat-x; 
+	padding-bottom:0; overflow:hidden;
+}
+.slider {
+	width:100%; margin:0; padding:0; list-style:none; 
+}
+.slider li { width:100%; float:left;}
+.slider li img { width:100%; float:left;}
+.slider li.large img { max-width:100%;}
+.prev { display:block; width:40px; height:110px; background:url(../images/arrow01.png) 0 0 no-repeat; position:absolute; left:0; top:50%; margin-top:-55px;z-index:100; text-indent:-9999px;}
+.prev:hover { background:url(../images/arrow01.png) 0 -110px no-repeat;}
+.next{display:block; width:40px; height:110px; background:url(../images/arrow01.png) -40px 0 no-repeat;position:absolute; right:0; top:50%; margin-top:-55px; z-index:100; text-indent:-9999px;}
+.next:hover { background:url(../images/arrow01.png) -40px -110px no-repeat;}
+.pagination { position:absolute; z-index:100; bottom:5px; right:20px;}
+.pagination a {	
+	width: 14px;
+	height: 14px;
+	margin: 0 5px 0 0;
+	display: inline-block;
+}
+.pagination a:nth-child(1){background-color: #5e5e5e;}
+.pagination a:nth-child(2){background-color: #767676;}
+.pagination a:nth-child(3){background-color: #8c8c8c;}
+.pagination a:nth-child(4){background-color: #a3a3a3;}
+.pagination a:nth-child(5){background-color: #bababa;}
+.pagination a.selected {
+	outline:#fff solid 1px;
+	cursor: default;
+}
+.pagination a span {
+	display: none;
+}
+/*news******************************************************/
+/*最新消息*/
+.news{
+  overflow: hidden;
+}
+/*news標題*/
+.news_title{
+	width: 20%;
+	/*height: 63px;*/
+}
+.news_title img{width: 100%;}
+.news .box{margin-top: 1%;margin-bottom: 2%;}
+.news_ul{
+  margin:0;
+  padding: 0;
+  list-style-type: none;
+  width: 80%;
+  margin-left: 10.24%;
+  clear: both;
+  overflow: hidden;
+}
+.news_li{
+  position: relative;
+  width: 23.584%;
+  float: left;
+  margin-right: 1.4%;
+}
+.news_li:last-child::after{
+  position: absolute;
+  content: '';
+  top:0;
+  right: -10%;
+  width: 10%;
+  height: 100%;
+  background-color: #303030;
+}
+.news_left{
+  position: relative;
+  width: 50%;
+  height: auto;
+  float: left;
+  clear: both;
+  overflow: hidden;
+  /*outline:#F00 dashed 1px; */
+}
+.news_right{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  background-color:#fff; 
+  clear: both;
+  overflow: hidden;   
+}
+.news_h1{
+  color:#000;
+  margin-top: 20%;
+  font-size: 20px;
+  font-weight: normal;
+   margin-left: 10%;
+   font-family:'Ubuntu', sans-serif,Verdana,"微軟正黑體"; 
+}
+.news_right p:nth-child(2),
+.news_right p:nth-child(3){
+  margin-left: 10%;
+  color:#9c9ea6;
+  font-size: 15px;
+  font-family:"微軟正黑體"; 
+}
+.news_left img{width:100%;}
+
+.news_li a:hover p{
+  color:#565861;
+}
+
+/*news手機板**********************************************/
+/*最新消息*/
+.list_carousel {
+  position: relative;
+ /* max-width: 768px;*/
+  width: 70%;
+  margin: 0 auto;
+  padding: 15px 0 15px 0px;  
+  /*outline:#F00 dashed 1px;*/
+  display: none;
+}
+.list_carousel ul {  
+  width: 70%;
+  margin: 0 ;
+  padding: 0;
+  list-style: none;
+  display: block;
+  /*background-color:#eee; */
+}
+.list_carousel li {
+  position: relative;
+  background-color: #fff;
+  /*border: 1px solid #ccc;*/
+  width: 70%;
+  /*padding: 0;*/
+  margin: 6px;
+  display: block;
+  float: left;
+}
+.list_carousel li img{width: 50%;float: left;}
+.m_news_right{
+  /*outline:#F00 dashed 1px;*/
+}
+.m_news_right{
+  position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    background-color:#fff; 
+    clear: both;
+    overflow: hidden;   
+}
+.m_news_h1{
+  margin-left: 10%;
+  color:#000;
+  margin-top: 20%;
+  font-size: .8rem;
+  font-weight: normal;
+  font-family:'Ubuntu', sans-serif,Verdana,"微軟正黑體"; 
+}
+.m_news_right p:nth-child(2),
+.m_news_right p:nth-child(3){
+   margin-left: 10%;
+  color:#9c9ea6;
+  font-size: .8rem;
+  font-family:"微軟正黑體"; 
+}
+.list_carousel li a:hover p{
+  color:#565861;
+}
+
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+/*左右箭頭*/
+.m_prev { 
+  position:absolute; 
+  left:-50px; top:50%; 
+  display:block;  
+  width:40px; height:100px;
+  z-index:100;
+  /*outline:#F00 dashed 1px;*/
+}
+.m_prev a{ 
+  position:absolute; 
+  top:-50%;
+  display:block;
+  width:100%; height:100%;
+  text-indent:-9999px;
+  background:url(../images/index/arrow.png) -5px -8px  no-repeat;
+
+  /*outline:#000 dashed 1px; */
+}
+.m_next { 
+  position:absolute; 
+  right:-50px; top:50%; 
+  display:block;  
+  width:40px; height:100px;
+  z-index:100;
+  /*outline:#F00 dashed 1px;*/
+}
+.m_next a{ 
+  position:absolute; 
+  top:-50%;
+  display:block;
+  width:100%; height:100%;
+  text-indent:-9999px;
+  background:url(../images/index/arrow.png) -80px -11px  no-repeat;
+ /* outline:#000 dashed 1px; */
+}
+/* grid調整************************************/
+      *, *:after, *:before { 
+        -webkit-box-sizing: border-box; -moz-box-sizing: border-box; 
+        box-sizing: border-box; }
+      .grid {
+        max-width: 1140px;
+        width: 83%;
+        list-style: none;
+        margin: 0px auto;
+        padding: 0;
+      }
+
+      .grid li {
+        position: relative;
+        display: block;
+        float: left;
+        /*padding:.8%;*/
+        margin: 14px 7px 0px 7px;
+        /*padding:5px;  */      
+        width: 18%;
+        opacity: 0;
+      }
+
+      .grid li.shown,
+      .no-js .grid li,
+      .no-cssanimations .grid li {
+        opacity: 1;
+      }
+
+      .grid li a,
+      .grid li img {
+        outline: none;
+        border: none;
+        display: block;
+        max-width: 100%;
+      }
+/*商品圖hover*/
+.grid li:hover >span{
+    opacity: .6;
+    bottom:8%;
+    transition:1s;
+}
+.grid li>span{
+    position: absolute;    
+    width: 100%;
+    padding:15px 0;
+    text-align: center;
+    background-color:#000;     
+    opacity: 0;
+    bottom:0px;
+    transition:.5s;
+}
+.grid li>span span{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    color:#fff;
+    height: 26px;
+    border: #fff 1px solid;
+}
+.grid li>span span:nth-child(1){
+    font-size: .8rem;
+    line-height: 27px;
+    /*letter-spacing: 2px;*/
+}
+.grid li>span span:nth-child(2){
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 27px;
+}
+.grid li>span span:nth-child(2) a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  color:#fff;
+}
+/*1*/
+/*#grid1 li {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}/*
+#grid1 li:hover, #grid1 li:focus, #grid1 li:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}*/
+/*2*/
+/*#grid1 li{
+  transform:scale(1,1);
+  -moz-transform:scale(1,1);
+  -webkit-transform:scale(1,1);
+  transition:.4s;
+}*/
+/*.aa{
+  transform:scale(1.2,1.2);
+  -moz-transform:scale(1.2,1.2);
+  -webkit-transform:scale(1.2,1.2);
+  z-index: 2000;
+  transition:.4s;
+}*/
+/*#grid1 li.animate:hover{
+  transform:scale(1.2,1.2);
+  -moz-transform:scale(1.2,1.2);
+  -webkit-transform:scale(1.2,1.2);
+  z-index: 2000;
+}*/
+
+
+/*所有*/
+.series_banner{
+      position: absolute;
+      width: 100%;
+}
+.series_banner img{width: 100%;}
+/*.container{
+      padding-top:220px;
+}*/
+/*微調*/
+.Clothing .container{
+      padding-top:20%;
+}
+.accessories .container{
+       padding-top:28%;
+       padding-bottom: 3%;
+ }
+.cosmetics .container{
+       padding-top:18%;
+ }
+.food .container{
+       padding-top:28%;
+ }
+.other .container{
+       padding-top: 35%;
+       padding-bottom: 3%;
+ }
+
+
+
+
+
+/*------------------------------------------------------------------
+Different Width Solution
+------------------------------------------------------------------*/
+@media screen and (max-width: 1920px) {
+
+}
+@media screen and (max-width: 980px) {
+.news_title{
+  width: 30%;
+}
+.news_ul{
+		display: none;
+	}
+.list_carousel {
+	  display: block;
+	}
+}
+/*平板取消hover效果*/
+@media screen and (max-width: 768px) {
+  .grid li>span{
+    display: none;
+}
+
+}
+@media screen and (max-width: 530px) {
+
+.list_carousel {
+  width: 85%;
+}
+.list_carousel ul {  
+  width: 85%;
+}
+.list_carousel li {
+  width: 85%;
+}
+  /*左右箭頭*/
+.m_prev { 
+  left:-30px;
+  width:40px; height:30%;
+}
+.m_prev a{ 
+   background:url(../images/index/arrow.png) 5px -8px  no-repeat;
+   background-size:180%; 
+}
+.m_next { 
+  right:-30px;
+  width:40px;  height:30%;
+}
+.m_next a{ 
+  background:url(../images/index/arrow.png) -40px -11px  no-repeat;
+  background-size:180%; 
+}
+
+}
+@media screen and (max-width: 900px) {
+  .grid li {
+     width: 29%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .grid li {
+      width: 45%;
+      margin: 14px 5px 0px;
+   }
+}

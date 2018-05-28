@@ -1,0 +1,295 @@
+/*------------------------------------------------------------------
+Theme Name: 天承
+Author URI: http://www.begonia.tw/
+Description: Index Layout
+Author: Begonia Design, Inc.
+------------------------------------------------------------------*/
+@charset "utf-8";
+/*@import "reset.css";*/
+/*------------------------------------------------------------------
+Main Layout
+------------------------------------------------------------------*/
+/*主視覺***********************************************/
+.mainvision {
+	width:100%; position:relative;
+	background:url(../images/line03.png) center bottom repeat-x; 
+	padding-bottom:0; overflow:hidden;
+}
+.slider {
+	width:100%; margin:0; padding:0; list-style:none; 
+}
+.slider li { width:100%; float:left;}
+.slider li img { width:100%; float:left;}
+.slider li.large img { max-width:100%;}
+.prev { display:block; width:40px; height:110px; background:url(../images/arrow01.png) 0 0 no-repeat; position:absolute; left:0; top:50%; margin-top:-55px;z-index:100; text-indent:-9999px;}
+.prev:hover { background:url(../images/arrow01.png) 0 -110px no-repeat;}
+.next{display:block; width:40px; height:110px; background:url(../images/arrow01.png) -40px 0 no-repeat;position:absolute; right:0; top:50%; margin-top:-55px; z-index:100; text-indent:-9999px;}
+.next:hover { background:url(../images/arrow01.png) -40px -110px no-repeat;}
+.pagination { position:absolute; z-index:100; bottom:5px; right:20px;}
+.pagination a {	
+	width: 14px;
+	height: 14px;
+	margin: 0 5px 0 0;
+	display: inline-block;
+}
+.pagination a:nth-child(1){background-color: #5e5e5e;}
+.pagination a:nth-child(2){background-color: #767676;}
+.pagination a:nth-child(3){background-color: #8c8c8c;}
+.pagination a:nth-child(4){background-color: #a3a3a3;}
+.pagination a:nth-child(5){background-color: #bababa;}
+.pagination a.selected {
+	outline:#fff solid 1px;
+	cursor: default;
+}
+.pagination a span {
+	display: none;
+}
+/*內容排版**************************************/
+.p_Clothing .container{
+  padding-top:2%;
+  padding-bottom: 2%;
+}
+/*側邊選單***********************************/
+.grid li img.ct_logo_img{
+  border: #D2D2D2 1px solid;
+}
+.left_top{
+  width: 100%; 
+  padding:10% 0;
+  border-bottom: #D2D2D2 1px solid;  
+  margin-top: 14px;
+}
+
+.left_top h3{
+  width:100%;
+  font-size:1.2rem;
+  font-family: 'Lora', serif,Verdana,"微軟正黑體"; 
+}
+.left_nav{
+  width: 100%;
+}
+.left_nav a{
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  color: #79787D;  
+  font-size: 15px;
+  text-decoration: none;
+  padding-left: 20%;
+  font-family:'Ubuntu', sans-serif,Verdana,"微軟正黑體";     
+}
+.left_nav a span{
+   display: inline-block;
+   width: 90%;
+   height: 80%;
+
+}
+.left_nav a:hover{
+    color: #AC8F7D;
+    background:url(../images/page_clothing/side_nav1.png) 10% center no-repeat;
+    background-size:8%;
+    
+}
+.left_nav a:hover span{
+    border-bottom:#AC8F7D 1px solid;
+}
+.left_nav a.active{
+    color: #AC8F7D;
+    background:url(../images/page_clothing/side_nav1.png) 10% center no-repeat;
+    background-size:8%;
+}
+.left_nav a.active span{
+    border-bottom:#AC8F7D 1px solid;
+}
+/*手機板下拉選單*/
+  .m_left_nav{
+    position: relative;
+    float: left;
+    width: 100%;
+    height:28px;
+    background:url(../images/all/mobile/nav_icon4.png) right center no-repeat; 
+    background-size: 30%;
+    outline: #BFBFC1 solid 1px;
+    display: none;
+  }
+  .m_left_nav span{
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    line-height: 28px;
+    padding-left: 5%;
+  }
+  .m_left_nav select{
+    width: 100%;
+    height: 100%;
+    font-family:'Ubuntu', sans-serif,Verdana;
+    font-weight: 300; 
+    font-size:14px; 
+    border-style: none;
+　　border-width: 0px; 
+    /*opacity: 0;*/
+    /*outline:#f00 dashed 1px;*/
+  } 
+/*內頁品牌介紹***********************************/
+.brand_logo_intro{
+  background-color:#333333; 
+  padding: 10px 0;
+}
+.brand_logo_intro span{
+  display: block;
+  margin:0 auto;
+  width: 80%;
+
+}
+.brand_logo_intro span h1{
+  font-weight: 300;
+  color:#fff;
+  font-size: 1.2rem;
+  padding: 5% 0;
+}
+.brand_logo_intro span p{
+  font-weight: 300;
+  color:#fff;
+  font-size: .8rem;
+  padding-bottom: 5%;
+  text-align: center;
+}
+/* grid調整************************************/
+      *, *:after, *:before { 
+        -webkit-box-sizing: border-box; -moz-box-sizing: border-box; 
+        box-sizing: border-box; }
+      .grid {
+        max-width: 1140px;
+        width: 83%;
+        list-style: none;
+        margin: 0px auto;
+        padding: 0;
+      }
+
+      .grid li {
+        position: relative;
+        display: block;
+        float: left;
+        /*padding:.8%;*/
+        margin: 14px 7px 0px 7px;
+        /*padding:5px;  */      
+        width: 18%;
+        opacity: 0;
+      }
+
+      .grid li.shown,
+      .no-js .grid li,
+      .no-cssanimations .grid li {
+        opacity: 1;
+      }
+
+      .grid li a,
+      .grid li img {
+        outline: none;
+        border: none;
+        display: block;
+        max-width: 100%;
+      }
+/*商品圖hover*/
+.grid li:hover >span{
+    opacity: .6;
+    bottom:8%;
+    transition:1s;
+}
+.grid li>span{
+    position: absolute;    
+    width: 100%;
+    padding:15px 0;
+    text-align: center;
+    background-color:#000;     
+    opacity: 0;
+    bottom:0px;
+    transition:.5s;
+    display: block;
+}
+.grid li>span span{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    color:#fff;
+    height: 26px;
+    border: #fff 1px solid;
+}
+.grid li>span span:nth-child(1){
+    font-size: .8rem;
+    line-height: 27px;
+}
+.grid li>span span:nth-child(2){
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 27px;
+}
+.grid li>span span:nth-child(2) a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  color:#fff;
+}
+/*清單頁.PAGER*/
+    .page{ width:96%;margin:20px 2% 2% 2%; text-align:center; clear:both;}
+    .page a{ 
+      display:inline-block; 
+      color:#999999; 
+      text-decoration:none; 
+      margin:0 5px;        
+    }
+    .page a.num{
+      width: 28px;
+      height: 28px;
+      border:#CCC solid 1px;
+      /*border-radius: 2px;*/
+      text-align: center;
+      line-height: 26px;
+    }
+    .page a.this{ color:#ffffff; background-color:#C0A797; border:#C0A797 solid 1px; }
+    .page a.num:hover{color:#ffffff; background-color:#C0A797; border:#C0A797 solid 1px; }
+    .page a.nextnext{ background:none;padding-right:10px;}
+    .page a.nextnext:hover{color:#C0A797;}
+    .page a.nextnext:active{color:#000;}
+
+
+
+
+
+/*------------------------------------------------------------------
+Different Width Solution
+------------------------------------------------------------------*/
+@media screen and (max-width: 1920px) {
+
+}
+@media screen and (max-width: 980px) {
+}
+@media screen and (max-width: 900px) {
+  .grid li {
+     width: 29%;
+  }
+  .left_top h3{
+  font-size:.9rem;
+  }
+}
+/*平板取消hover效果*/
+@media screen and (max-width: 768px) {
+  .grid li>span{
+    display: none;
+}
+
+}
+@media screen and (max-width: 400px) {
+  .left_nav{
+    display: none;
+  }
+  .m_left_nav{
+    display: block;
+  }
+  .grid li {
+      width: 45%;
+      margin: 14px 5px 0px;
+   }
+}

@@ -1,0 +1,616 @@
+/*------------------------------------------------------------------
+Theme Name: 天承
+Author URI: http://www.begonia.tw/
+Description: Index Layout
+Author: Begonia Design, Inc.
+------------------------------------------------------------------*/
+@charset "utf-8";
+@import "reset.css";
+/*------------------------------------------------------------------
+Main Layout
+------------------------------------------------------------------*/
+
+/* grid調整************************************/
+      *, *:after, *:before { 
+        -webkit-box-sizing: border-box; -moz-box-sizing: border-box; 
+        box-sizing: border-box; }
+
+/*所有*/
+.series_banner{
+      position: absolute;
+      width: 100%;
+}
+.series_banner img{width: 100%;}
+/*.container{
+      padding-top:220px;
+}*/
+/*微調*/
+.after7_01 .container{
+      padding-top:33%;
+}
+.after7_02 .container{
+       padding-top:40%;
+       padding-bottom: 3%;
+ }
+/*after7小標*/
+.txt_wrap{
+    padding: 0 2%;
+}
+.after_p{
+    max-width: 722px;
+    margin: 0  auto;
+    text-align: center;
+    font-family: "微軟正黑體", "新細明體";
+    font-size: 16px;
+    line-height: 32px;
+}
+.after_spot01{
+    display: inline;
+    padding: 5px 40px;
+    background: url(../images/all/logo.png) 0 -5px no-repeat;
+    background-size: 80px;
+    margin: 0 5px;
+}
+.after_spot02{
+    display: inline;
+    padding: 0px 8px;
+    background: url(../images/about/04.png) 0 0 no-repeat;
+    background-size: 14px;
+
+}
+.after_line{
+    text-align: center;
+    margin:30px auto;
+}
+/*斜斜的文字*/
+.p_static_wrap{
+    position: absolute;
+    left:50%;
+    top: 30%;
+    width: 400px;
+    height: 28px;
+    -webkit-transform:rotate(-8deg);
+    -ms-transform:rotate(-8deg);
+    -moz-transform:rotate(-8deg);
+    transform:rotate(-8deg);
+}
+.p_static{
+    position: absolute;
+    right: 50%;
+    width: 100%;
+    height: 100%;
+    
+}
+/*斜斜的文字(手機板不用斜斜的了)*/
+.p_static_wrap2{
+    display: none;
+    position: absolute;
+    left:0%;
+    top: 16%;
+    width: 100%;
+    height: 28px;
+    -webkit-transform:scale(.7,.7);
+    -ms-transform:scale(.7,.7);
+    -moz-transform:scale(.7,.7);
+    transform:scale(.7,.7);
+    /*margin: 0 auto;*/
+}
+.p_static2{
+    width: 100%;
+    height: 100%;    
+}
+/*after7拼圖*/
+.pinto_mobile{
+    display: none;
+}
+.after_7{
+    position: relative;
+    height: 550px;
+    width: 1185px;
+    margin: 0 auto;
+}
+.pinto{
+    position: absolute;
+    display: block;
+    z-index: 5;
+}
+.after_7 img{
+  position: relative;
+  width: 1185px;
+  z-index: 0;
+}
+.pinto01{
+    top: 87px;
+    left: 335px;
+    width: 171px;
+    height: 120px;
+    background: url(../images/about/pinto_7/01.png) 0 0 no-repeat;
+}
+.pinto02{
+    top: 87px;
+    left: 412px;
+    width: 243px;
+    height: 126px;
+    background: url(../images/about/pinto_7/02.png) 0 0 no-repeat;
+}
+.pinto03{
+    top: 87px;
+    left: 628px;
+    width: 226px;
+    height: 130px;
+    background: url(../images/about/pinto_7/03.png) 0 0 no-repeat;
+}
+.pinto04{
+    top: 96px;
+    left: 624px;
+    width: 227px;
+    height: 166px;
+    background: url(../images/about/pinto_7/04.png) 0 0 no-repeat;
+}
+.pinto05{
+    top: 250px;
+    left: 564px;
+    width: 216px;
+    height: 146px;
+    background: url(../images/about/pinto_7/05.png) 0 0 no-repeat;
+}
+.pinto06{
+    top: 386px;
+    left: 557px;
+    width: 164px;
+    height: 198px;
+    background: url(../images/about/pinto_7/06.png) 0 0 no-repeat;
+}
+.pinto07{
+    top: 392px;
+    left: 472px;
+    width: 155px;
+    height: 192px;
+    background: url(../images/about/pinto_7/07.png) 0 0 no-repeat;
+}
+.pinto p{
+    position: absolute;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color:#612c21;      
+}
+.pinto span{
+     position: absolute;     
+     height: 1px;
+     border: 1px solid #C2C2C2;
+     
+}
+p.pinto_p01{
+    width: 330px; 
+    left: -278px;
+    top: -15px;
+}
+span.pinto_span01{
+    width: 330px;
+    left: -326px;
+    top: 6px;
+}
+p.pinto_p02{
+    width: 330px; 
+    left: -301px;
+    top: 98px;
+}
+span.pinto_span02{
+    width: 330px;
+    left: -328px;
+    top: 119px;
+}
+p.pinto_p03{
+    width: 330px; 
+    left: 248px;
+    top: -17px;
+}
+span.pinto_span03{
+    width: 330px;
+    left: 218px;
+    top: 6px;
+}
+p.pinto_p04{
+    width: 330px; 
+    left: 178px;
+    top: 141px;
+}
+span.pinto_span04{
+    width: 330px;
+    left: 150px;
+    top: 162px;
+}
+p.pinto_p05{
+    width: 330px; 
+    left: 184px;
+    top: 114px;
+}
+span.pinto_span05{
+    width: 330px;
+    left: 154px;
+    top: 136px;
+}
+p.pinto_p06{
+    width: 330px;
+    left: 174px;
+    top: 14px;
+}
+span.pinto_span06{
+    width: 330px;
+    left: 157px;
+    top: 7px;
+}
+p.pinto_p07{
+    width: 420px;
+    left: -408px;
+    top: 159px;
+}
+span.pinto_span07{
+    width: 435px;
+    left: -427px;
+    top: 184px;
+
+}
+
+
+
+
+
+
+
+/*聯絡大區塊*******************************/
+.about_contact{
+    clear: both;
+    overflow: hidden;
+    margin:0 auto;
+    width: 95%;
+}
+.contact_card_wrap{
+    clear: both;
+    overflow: hidden;
+    width: 1290px;
+    margin: 0 auto;
+}
+.contact_card{
+   position: relative;
+   float: left;
+   margin:0 2%;
+}
+.contact_card1{   
+    width: 381px;
+    height: 437px;
+    background: url(../images/about/08.png) 0 0 no-repeat;
+    background-size: 100%;
+}
+.contact_card2{
+    position: relative;
+    width:805px;
+    border:1px solid #b5b5b5;
+    background-color: #fff;
+}
+/*卡片2邊框*/
+.frame{
+    position: absolute;
+    display: block;
+    z-index: 2;
+}
+.frame01{
+    left:0;
+    width: 20px;
+    height: 100%;
+    background: url(../images/about/frame/line_left.png) 0 0 repeat-y;
+}
+.frame02{
+    top:0;
+    width: 95%;
+    height: 20px;
+    background: url(../images/about/frame/line_top.png) 0 0 repeat-x;
+}
+.frame03{
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: url(../images/about/frame/line_right.png) 0 0 repeat-y;
+}
+.frame04{
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: url(../images/about/frame/line_bottom.png) 0 0 repeat-x;
+}
+.corner{
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+}
+.corner01{
+    left:0;
+    top:0;
+    background: url(../images/about/frame/line_coner01.png) 0 0 repeat-y;
+}
+.corner02{
+    top:0;
+    right: 0;
+    background: url(../images/about/frame/line_coner02.png) 0 0 repeat-x;
+}
+.corner03{
+    right: 0;
+    bottom: 0;
+    background: url(../images/about/frame/line_coner03.png) 0 0 repeat-y;
+}
+.corner04{
+    left: 0;
+    bottom: 0;
+    background: url(../images/about/frame/line_coner04.png) 0 0 repeat-x;
+}
+/*卡片內容*/
+.contact_card_h1{
+    width: 188px;
+    height: 38px;
+    background: url(../images/about/06.png) 0 0 no-repeat;
+    text-indent: -9999px;
+    margin: 39px auto 0;
+    background-size: 100%;
+}
+.contact_card_h2{
+    width: 119px;
+    height: 38px;
+    background: url(../images/about/05.png) 0 0 no-repeat;
+    text-indent: -9999px;
+    margin: 39px auto 0;
+    background-size: 100%;
+}
+.contact_card_h3{
+    width: 188px;
+    height: 73px;
+    background: url(../images/about/07.png) 0 0 no-repeat;
+    text-indent: -9999px;
+    margin: 39px auto 0;
+    background-size: 100%;
+}
+.contact_card_p{
+    font-size: 13px;
+    line-height: 22px;
+    color:#747474;
+    text-align: center;
+    margin:9px auto 0;
+}
+.contact_card_p1{
+    width: 414px;
+}
+.contact_card_p2{
+    font-size: 14px;
+    line-height: 25px;
+    width: 414px;
+    color:#c4c4c4;
+    text-align: left;
+    margin:9px auto 0;
+    /*font-weight: 700;*/
+}
+.about_cart_p_warp{
+  margin:31px 0 0px 75px;
+}
+.contact_card_p2 .icon_font{
+  width: 16px;
+  font-size: 16px;
+  vertical-align: sub;
+  margin-right: 6px;
+}
+
+/*聯絡我們表單內容*/
+form.form_contact{
+  margin: 5% 5% 5% 5%;
+  clear: both;
+  overflow: hidden;
+}
+form.form_contact>div{
+  
+  float: left;
+  margin: 0 .8% 5px 0;
+}
+.form-group1{
+  /*width: 42%;*/
+  width: 304px;
+}
+.form-group2{
+  /*width: 56%;*/
+  width: 405px;
+}
+.about_input{  
+  display: block;
+  line-height: 25px;
+  width: 100%;
+  height: 27px;
+  margin-bottom: 5px;
+  border: 1px solid #E5E5E5;
+  padding: 0 7px;
+  /*color: #525252;*/
+  font-size: 14px;
+}
+.a_input01{
+  height: 92px;
+}
+.a_input02{
+  float: left;
+  display: inline-block;
+  width: 283px;
+  margin-right: 5px;
+/*  max-width: 50px;
+  min-width: 200px;*/
+}
+.a_input03{
+  display: inline-block;
+  width: 116px;
+}
+.a_input03 img{
+  float: left;
+  width: 116px
+}
+/**/
+.row{
+  float: left;
+  width: 100%;
+}
+.button04 {
+  margin: 25px auto;
+  width: 166px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+.button04 a {
+  display: block;
+  color: #fff;
+  background-color: #656564;
+  transition: .5s;
+}
+
+/*------------------------------------------------------------------
+Different Width Solution
+------------------------------------------------------------------*/
+@media screen and (max-width: 1920px) {
+
+}
+@media screen and (max-width: 1360px) {
+  .contact_card_wrap{
+      width: 830px;
+  }
+  .about_contact{
+     width: 832px; 
+     width: 100%; 
+  }
+  form.form_contact>div{
+    float: none; 
+    margin: 0 auto;
+  }
+  .contact_card2{
+    width: 381px;
+    
+  }
+  .form-group2{
+    width: 304px;
+  }
+  .contact_card_p1{
+    width: 284px;  
+  }
+  .a_input02{
+    width: 183px;
+  }
+}
+@media screen and (max-width: 1185px) {
+.after_7{
+    display:none; 
+}
+  /*手機板本*/
+.pinto_mobile {
+  display: block;
+  margin-top: 9%;
+}
+
+.pinto_mobile > a {
+width: 100%;
+display: block;
+border-bottom: 1px solid #656564;
+}
+.pinto_mobile > a:first-child {
+  border-top: 1px solid #656564;
+}
+
+.pinto_mobile > a > div {
+  display: inline-block;
+  width: 25%;
+  vertical-align: middle;
+}
+.pinto_mobile > a > div img {
+  display: block;
+}
+
+.pinto_mobile > a > span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 61%;
+  margin-left: 3%;
+}
+/*斜斜的字*/
+.p_static_wrap{
+  display: none;
+}
+.p_static_wrap2{
+  display: block;
+}
+
+
+
+
+
+
+
+}
+@media screen and (max-width: 980px) {
+.news_title{
+  width: 30%;
+}
+.news_ul{
+		display: none;
+	}
+.list_carousel {
+	  display: block;
+	}
+}
+@media screen and (max-width: 832px) {
+.about_contact{
+   width: 100%; 
+}
+.contact_card_wrap{
+    width: 400px;
+}
+.contact_card2{
+  margin-top: 20px;
+}
+}
+@media screen and (max-width: 400px) {
+.contact_card1{   
+    width: 381px;
+    height: 437px;
+    background: url(../images/about/08.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.contact_card_wrap {
+    width: 100%;
+}
+.contact_card1,.contact_card2 {
+    width: 96%;
+    padding: 0px 5% 10px 5%;
+}
+.about_cart_p_warp{
+  margin: 31px 6% 0px;
+}
+.contact_card_p1{
+    width: 90%;
+}
+.contact_card_p2{
+    width: 100%;
+}
+.contact_card_p2 .icon_font{
+    display: none;
+}
+.form-group1,.form-group2  {
+    width: 100%;
+}
+.a_input02 {
+    width: 100%;
+}
+.frame02,.frame04{
+    width: 90%;
+}
+
+}
+@media screen and (max-width: 900px) {
+  
+}
+@media screen and (max-width: 400px) {
+  
+}
